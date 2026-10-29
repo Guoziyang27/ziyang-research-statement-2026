@@ -1,0 +1,16 @@
+% \section{Future research agenda}
+
+
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+    \node[shape=circle, fill=black, text=white, inner sep=1.5pt, minimum size=5pt] (char) {#1};}}
+
+\textbf{Future agenda: complementarity benchmarks over strong expert baselines.} 
+Current AI evaluation asks whether an agent matches or beats experts---the wrong target in many domains where humans remain in control. 
+I will use decision-theoretic complementary value to construct benchmarks and datasets that evaluate how much \emph{additional} decision value a model offers conditioning on strong expert (human) decisions.
+My ongoing work auditing LLM-generated peer reviews instantiates this program: raw LLM reviews provide little complementary value, while structured pipelines do.
+ 
+\textbf{Future agenda: deploying complementary agents with domain experts.} 
+Realizing complementarity in practice requires eliciting what experts already know. 
+Working with domain experts, I will elicit their provisional judgments and train agents to complement those baselines.
+I will also study how design choices in the decision pipeline, such as when the agent's signal is shown, and how it is framed and formatted, determine how much of the theoretical value is behaviorally realized.
+Together, these threads enhance the field to design better collaborative agents through the lens of complementarity.

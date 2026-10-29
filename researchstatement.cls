@@ -49,12 +49,11 @@
   ItalicFont=*-Italic,
   BoldFont=*-Bold,
   BoldSlantedFont=*-BoldItalic,
-  FontFace={l}{n}{*-Light},
-  FontFace={l}{it}{*-LightItalic},
   FontFace={m}{n}{*-Medium},
-  FontFace={sb}{n}{*-Medium},
-  FontFace={sb}{it}{*-MediumItalic},
-]{Roboto}
+  FontFace={m}{it}{*-MediumItalic},
+  FontFace={sb}{n}{*-SemiBold},
+  FontFace={sb}{it}{*-SemiBoldItalic},
+]{Lora}
 
 % Font series commands
 \DeclareRobustCommand{\smseries}{\fontseries{sb}\selectfont}
@@ -73,17 +72,17 @@
 \newfontfamily\namefont[
   Path=\@fontdir,
   Extension=.ttf,
-]{Helvetica-Bold}[LetterSpace=.25]
+]{Lora-Bold}[LetterSpace=.25]
 
 % Header font
 \newfontfamily\hfont[
   Path=\@fontdir,
   Extension=.ttf,
   UprightFont=*-Regular,
-  ItalicFont=*-Oblique,
+  ItalicFont=*-Italic,
   BoldFont=*-Bold,
   SlantedFont=*-Regular,
-]{Helvetica}
+]{Lora}
 
 %--------------------------------------------------------------------------------
 % Colors
@@ -114,16 +113,16 @@
 %--------------------------------------------------------------------------------
 % Section Formatting
 %--------------------------------------------------------------------------------
-\titleformat{\section}{\hfont\bfseries\fontsize{11.5pt}{11.5pt}\selectfont\raggedright}{}{0em}{}
+\titleformat{\section}{\hfont\bfseries\fontsize{11pt}{12.5pt}\selectfont\raggedright}{}{0em}{}
 \titlespacing{\section}{1pt}{1pt}{1pt}
 
-\titleformat{\subsection}{\hfont\slshape\fontsize{10pt}{10pt}\selectfont\raggedright}{}{0em}{}
+\titleformat{\subsection}{\hfont\slshape\fontsize{12pt}{11pt}\selectfont\raggedright}{}{0em}{}
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
 
-\titleformat{\subsubsection}{\hfont\slshape\fontsize{10.5pt}{10.5pt}\selectfont\raggedright}{}{0em}{}
+\titleformat{\subsubsection}{\hfont\slshape\fontsize{11.5pt}{11.5pt}\selectfont\raggedright}{}{0em}{}
 \titlespacing{\subsubsection}{3pt}{0pt}{0pt}
 
-\titleformat{\paragraph}[runin]{\smseries\fontsize{9pt}{9pt}\selectfont\raggedright}{\llap{\parbox{\titleindent}{\N\hfill}}}{0em}{}
+\titleformat{\paragraph}[runin]{\smseries\fontsize{11pt}{11pt}\selectfont\raggedright}{\llap{\parbox{\titleindent}{\N\hfill}}}{0em}{}
 \titlespacing*{\paragraph}{0pt}{0em plus 0em minus 0em}{.5em plus 0ex}
 
 %--------------------------------------------------------------------------------
@@ -160,7 +159,7 @@
 % Font Size Settings
 %--------------------------------------------------------------------------------
 \AtBeginDocument{%
-  \fontsize{9pt}{9pt}\selectfont
+  \fontsize{11pt}{11pt}\selectfont
 }
 
 %--------------------------------------------------------------------------------

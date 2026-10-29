@@ -1,0 +1,48 @@
+
+\setlength{\parindent}{\myindent}
+\setlength{\parskip}{\myparskip}
+
+
+% \section*{Line 1: Formalizing and estimating complementarity in multi-agent decisions}
+\textbf{Line 1: formalizing and estimating complementarity in multi-agent decisions.}
+Collaborative decision-making is most valuable when information is asymmetric: human and AI each bring unique information.
+Yet the same asymmetry makes collaboration hard, e.g., a human expert cannot see which of their own observations the model has already used and which provide genuinely new evidence. 
+My first line of work develops decision-theoretic frameworks to rigorously characterize this asymmetry: who knows what, what it is worth, and whether it is used.
+
+The natural first question is: when the two sides disagree, whose information is more valuable?
+My foundational work on AI reliance \cite{guo2024decision} formalized optimal reliance via a rational Bayesian benchmark.
+Given historical observations of human decisions, AI decisions and state, the framework can precisely decompose behavioral loss into mis-reliance relative to the optimal rate, versus failure to discriminate which side holds better information on specific instances.
+Reanalyzing three influential human-AI studies, we revealed issues of study design and novel insights into sources of error.
+% The bottleneck is not over-/under-reliance on AI prediction, but the decision-makers' inability to extract the decision-relevant information already in front of them. 
+% Because the decomposition requires only samples of agents' independent judgments, the framework also serves a prospective role.
+% Before an AI assistant is ever deployed, the framework can be used to estimate the potential for complementarity on a task, such as whether there is decision-relevant value left to unlock at all.
+
+% \jessica{not clear that previous sentence is talking about two different things - not extracting decision relevant info sounds like a problem of reliance} \jessica{if you can fit in, I think one of the more powerful uses of the framework is to judge the potential for complementarity (before you deploy the AI by observing samples of agents' independent judgments going into the task)}
+ 
+My follow-up paper~\citep{guo2026value} formalizes the value of information in human-AI decision-making, i.e., how much a signal can improve the decision performance, and how much of that value is \emph{complementary}, not already captured by the other agent's baseline policy.
+For example, a radiology model's risk score may be highly informative in isolation yet carry little complementary value if clinicians already infer the same risk from the image, while a weaker signal capturing evidence clinicians systematically miss can be far more valuable.
+In \citep{guo2026explanations}, I ask how the asymmetry can be resolved, treating explanations as information signals valued by the decisions they enable.
+% This framework develops new methods by formalizing the intuition that interpretability techniques and explainations should be ``actionable'', which prior work has hinted at but failed to precisely define.
+The framework formalizes the intuition that explanations should be ``actionable'', which prior work has hinted at but failed to precisely define.
+% Empirical demonstrations show that estimands estimated from real data identify where an explanation is likely to fail before costly human studies.
+
+
+% My follow-up paper~\citep{guo2026value} formalizes the value of information in human-AI decision-making, i.e., how much a signal can improve decision performance, and how much of that value is \emph{complementary}, not already captured by the other agent's baseline policy.
+% For example, a radiology model's risk score may be highly informative in isolation yet carry little complementary value if clinicians already infer the same risk from the image, while a weaker signal capturing evidence clinicians systematically miss can be far more valuable.
+% In \citep{guo2026explanations}, I ask how the asymmetry can be resolved, treating explanations as information signals valued by the decisions they enable.
+% The framework formalizes the intuition---hinted at by prior work but never precisely defined---that explanations should be ``actionable''.
+% Empirical demonstrations show that estimands estimated from real data identify where an explanation is likely to fail before costly human studies.
+% The empirical results in this line of work show a correlation between the theoretical estimate and the behavioral performance: when the theoretical complementary value of the AI and explanation is low, decision-makers (including human participants and LLM agents) also achieve low performance. \jessica{previous sentence seems too nuanced... Instead I might sum it up something like Empirical demonstrations on [what domain] show that the estimands we define and estimate from real data can help identify where an explanation is likely to fail prior to running costly human studies.'}
+
+
+% \section*{Line 2: Optimizing the complementarity of AI models and explanations}
+\textbf{Line 2: optimizing the complementarity of AI models and explanations.}
+My second line of work maps my theoretical contributions to novel interventions. 
+Within the framework of \cite{guo2026value}, I developed ILIV-SHAP, an explanation method that directs decision-makers to available evidence that is relevant to their decision and complementary to what they already know.
+This approach shifts the traditional explainability focus from what information impacts the model prediction to what information could be used to improve the agent decisions.
+ 
+ComplLLM \citep{guo2026complllm} optimizes the AI model itself, training it to produce the complementary information that decision-makers lack.
+This post-training framework fine-tunes an LLM to extract interpretable signals from unstructured text that complement an upstream agent's recommendation, using complementary information value as the reward in supervised fine-tuning followed by reinforcement learning. 
+
+We evaluate both ComplLLM and ILIV-SHAP in preregistered human experiments on tasks such as medical diagnosis, content moderation, and scientific peer review.
+Our results show that both innovations significantly improve human decisions over approaches that are agnostic to complementarity. % did not offer significant improvement.

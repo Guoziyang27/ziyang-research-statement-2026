@@ -10,6 +10,7 @@
 % Additional Packages
 %--------------------------------------------------------------------------------
 \usepackage{lipsum}
+\newcommand{\jessica}[1]{\textcolor{red}{JH: #1}}
 
 %--------------------------------------------------------------------------------
 % Document
@@ -22,13 +23,13 @@
 \def\nespace{\hskip\fontdimen2\font minus\fontdimen4\font\relax}
 \frenchspacing
 
-\newcommand{\mynameinpaper}{{\namefont{First Last}}}
+\newcommand{\mynameinpaper}{{\namefont{Ziyang Guo}}}
 
 %--------------------------------------------------------------------------------
 % Header and Footer Configuration
 %--------------------------------------------------------------------------------
-\makeheader{First Last}{Research}{Statement}
-\makefooter{First Last}{Research Statement}{\thepage\separator\pageref{LastPage}}
+\makeheader{Ziyang Guo}{Research}{Statement}
+\makefooter{Ziyang Guo}{Research Statement}{\thepage\separator\pageref{LastPage}}
 
 %--------------------------------------------------------------------------------
 % Main Body
@@ -36,9 +37,9 @@
 \edef\myparskip{\the\parskip}
 \edef\myindent{\the\parindent}
 
-\input{tex/p1.tex}
-\input{tex/p2.tex}
-\input{tex/p3.tex}
+\input{tex/2-page-version/1_introduction}
+\input{tex/2-page-version/2_current_work}
+\input{tex/2-page-version/3_future_work}
 
 %--------------------------------------------------------------------------------
 % References
