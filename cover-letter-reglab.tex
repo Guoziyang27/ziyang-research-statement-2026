@@ -1,0 +1,62 @@
+\documentclass{researchstatement}
+
+\hypersetup{pdftitle={Ziyang Guo - RegLab Postdoctoral Fellowship Cover Letter},pdfauthor={Ziyang Guo}}
+
+% Letterhead adapted from Fumeng Yang's Northwestern cover letter:
+% https://www.fmyang.com/files/statements/GENERIC-letter_2023.pdf
+\definecolor{northwesternpurple}{HTML}{4E2A84}
+\definecolor{letterheadgray}{HTML}{808087}
+\definecolor{hookcolor}{HTML}{D7CFE6}
+\newcommand{\contactseparator}{\hspace{5pt}\textcolor{letterheadgray}{\rule[-1pt]{.4pt}{7pt}}\hspace{5pt}}
+
+\begin{document}
+
+% Keep the statement's body font, with spacing that accommodates the letterhead
+% within RegLab's 1.5-page limit.
+\microtypesetup{expansion=false}
+\setlength{\emergencystretch}{1em}
+\setlength{\parfillskip}{0pt plus 1fil}
+\def\nespace{\hskip\fontdimen2\font minus\fontdimen4\font\relax}
+\frenchspacing
+\raggedbottom
+\setstretch{1.3}
+\fontsize{11pt}{11pt}\selectfont
+
+% The reference uses a contact footer on both pages.
+\fancyhf{}
+\fancyfoot[L]{{\setstretch{1}\fontsize{7pt}{8pt}\selectfont
+  \textcolor{northwesternpurple}{Ziyang Guo}\contactseparator
+  \textcolor{letterheadgray}{\href{https://ziyangguo.com/}{ziyangguo.com}}\contactseparator
+  \textcolor{letterheadgray}{\href{mailto:ziyang.guo@northwestern.edu}{ziyang.guo@northwestern.edu}}}}
+
+% Vector department wordmark at left; editable institutional address at right.
+\noindent
+\begin{minipage}[t]{.56\textwidth}
+  \vspace{0pt}
+  \includegraphics[width=2in]{pic/northwestern-cs-letterhead.pdf}
+\end{minipage}\hfill
+\begin{minipage}[t]{1.62in}
+  \vspace{0pt}
+  \setstretch{1}\fontsize{7pt}{8.4pt}\selectfont\color{letterheadgray}
+  Northwestern University\\
+  Department of Computer Science\\
+  Mudd Hall\\
+  2233 Tech Drive, Third Floor\\
+  Evanston, Illinois, 60208
+\end{minipage}\par
+
+\vspace{12pt}
+\today\par
+
+\vspace{8pt}
+{\setstretch{1}\fontsize{9pt}{11pt}\selectfont
+RegLab Search Committee\\
+Stanford University\\
+559 Nathan Abbott Way\\
+Stanford, CA 94305\par}
+
+\vspace{10pt}
+
+\input{tex/reglab-cover-letter}
+
+\end{document}

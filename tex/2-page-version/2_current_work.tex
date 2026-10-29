@@ -44,5 +44,5 @@ This approach shifts the traditional explainability focus from what information 
 ComplLLM \citep{guo2026complllm} optimizes the AI model itself, training it to produce the complementary information that decision-makers lack.
 This post-training framework fine-tunes an LLM to extract interpretable signals from unstructured text that complement an upstream agent's recommendation, using complementary information value as the reward in supervised fine-tuning followed by reinforcement learning. 
 
-We evaluate both ComplLLM and ILIV-SHAP in preregistered human experiments on tasks such as medical diagnosis, content moderation, and scientific peer review.
-Our results show that both innovations significantly improve human decisions over approaches that are agnostic to complementarity. % did not offer significant improvement.
+In a preregistered house-price prediction experiment with 421 participants, ILIV-SHAP improved human-AI decisions over standard SHAP explanations when the AI provided complementary information~\citep{guo2026value}.
+ComplLLM evaluations span medical diagnosis, content moderation, and scientific peer review, demonstrating how models can be trained to provide information that complements existing recommendations~\citep{guo2026complllm}.

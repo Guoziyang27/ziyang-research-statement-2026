@@ -19,6 +19,7 @@
 
 % Typography Settings
 \microtypesetup{expansion=false}
+\setlength{\emergencystretch}{1em}
 \setlength{\parfillskip}{0pt plus 1fil}
 \def\nespace{\hskip\fontdimen2\font minus\fontdimen4\font\relax}
 \frenchspacing
@@ -44,8 +45,11 @@
 %--------------------------------------------------------------------------------
 % References
 %--------------------------------------------------------------------------------
+\begingroup
+\setstretch{1.1}
 \reffont
 \bibliographystyle{unsrt}
 \bibliography{ref.bib}
+\endgroup
 
 \end{document}

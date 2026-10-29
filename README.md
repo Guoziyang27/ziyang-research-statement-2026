@@ -1,5 +1,46 @@
 # template-research-statement
 
+## RegLab application version (October 2026)
+
+The RegLab cover letter is in `tex/reglab-cover-letter.tex`, with its entry point
+in `cover-letter-reglab.tex`. It uses the statement's `researchstatement` class
+and body font, with a Northwestern Computer Science letterhead adapted from
+[Fumeng Yang's reference letter](https://www.fmyang.com/files/statements/GENERIC-letter_2023.pdf).
+The vector wordmark in `pic/northwestern-cs-letterhead.pdf` was extracted from
+that reference; the institutional address, recipient, date, and contact footer
+are editable LaTeX in the entry-point file. The current revision fits on one page
+with 11-point body text. Compile with XeLaTeX.
+The compiled application PDF is
+`output/pdf/ziyang-guo-reglab-cover-letter.pdf`. Compile from the repository root:
+
+```sh
+latexmk -xelatex cover-letter-reglab.tex
+latexmk -xelatex template-RS.tex
+```
+
+The cover letter addresses the [RegLab posting](https://hai.stanford.edu/research/fellowship-programs#reglab)'s
+research, methods, fit, and professional-goals requirements. The current draft
+preserves the author's revised focus on creative tasks, tacit expertise, and
+collaboration with agency partners. Expected PhD completion is 2027,
+as listed in the [September 2026 CV](https://ziyangguo.com/assets/pdf/ziyang_guo_CV.pdf).
+
+Verified updates also applied to the original statement and bibliography:
+
+- [ComplLLM](https://www.hullmanlab.northwestern.edu/paper/2026/10/04/complllm.html)
+  is accepted at NeurIPS 2026. Its bibliography entry now names the main-conference
+  venue and uses Kenneth Holstein's full name.
+- The [ICLR 2026 paper](https://www.hullmanlab.northwestern.edu/paper/2026/01/01/aciv.html)
+  is now titled *Explaining and Improving Information Complementarities in
+  Multi-Agent Decision-making*. Unverified volume and page fields were removed.
+- Human-study wording now identifies the preregistered 421-participant house-price
+  experiment from the [ICLR paper](https://ziyangguo.com/assets/pdf/ICLR2026_informative_analysis.pdf).
+  The [public ComplLLM preprint](https://arxiv.org/html/2602.19458v1) supports the
+  listed application domains but does not establish the original blanket claim
+  of preregistered human improvements across those domains. The wording therefore
+  distinguishes those evaluations from the verified human experiment.
+
+## Original template documentation
+
 ![Preview](preview.png)
 
 This is the format I created for my faculty job applications in the 2023--24 cycle. You can view my research statement at this [link](https://www.fmyang.com/files/statements/Fumeng_Yang-RS_2023.pdf). Several people asked me for this template. I'm happy to share it, although I think this template is a little hard to use. :-) It works best if you need lots of figures. The main file is `template-RS.tex`, and most of the formatting is in `researchstatement.cls`.

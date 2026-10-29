@@ -1,3 +1,17 @@
+## Project outputs (PDF assets in pic/ are required for compilation):
+/*.pdf
+/output/
+/build/
+/template-RS/
+/preview.png
+
+## Operating system and editor metadata:
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
