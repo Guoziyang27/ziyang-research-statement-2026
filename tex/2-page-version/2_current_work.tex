@@ -5,7 +5,7 @@
 
 % \section*{Line 1: Formalizing and estimating complementarity in multi-agent decisions}
 \textbf{Line 1: formalizing and estimating complementarity in multi-agent decisions.}
-Collaborative decision-making is most valuable when information is asymmetric: human and AI each bring unique information.
+Collaborative decision-making is most valuable when information is asymmetric: the human and AI each bring unique information.
 Yet the same asymmetry makes collaboration hard, e.g., a human expert cannot see which of their own observations the model has already used and which provide genuinely new evidence. 
 My first line of work develops decision-theoretic frameworks to rigorously characterize this asymmetry: who knows what, what it is worth, and whether it is used.
 
@@ -19,7 +19,7 @@ Reanalyzing three influential human-AI studies, we revealed issues of study desi
 
 % \jessica{not clear that previous sentence is talking about two different things - not extracting decision relevant info sounds like a problem of reliance} \jessica{if you can fit in, I think one of the more powerful uses of the framework is to judge the potential for complementarity (before you deploy the AI by observing samples of agents' independent judgments going into the task)}
  
-My follow-up paper~\citep{guo2026value} formalizes the value of information in human-AI decision-making, i.e., how much a signal can improve the decision performance, and how much of that value is \emph{complementary}, not already captured by the other agent's baseline policy.
+My follow-up paper~\citep{guo2026value} formalizes the value of information in human-AI decision-making, i.e., how much a signal can improve best case decision performance, and how much of that value is \emph{complementary}, not already captured by the other agent's baseline policy.
 For example, a radiology model's risk score may be highly informative in isolation yet carry little complementary value if clinicians already infer the same risk from the image, while a weaker signal capturing evidence clinicians systematically miss can be far more valuable.
 In \citep{guo2026explanations}, I ask how the asymmetry can be resolved, treating explanations as information signals valued by the decisions they enable.
 % This framework develops new methods by formalizing the intuition that interpretability techniques and explainations should be ``actionable'', which prior work has hinted at but failed to precisely define.
@@ -41,7 +41,7 @@ My second line of work maps my theoretical contributions to novel interventions.
 Within the framework of \cite{guo2026value}, I developed ILIV-SHAP, an explanation method that directs decision-makers to available evidence that is relevant to their decision and complementary to what they already know.
 This approach shifts the traditional explainability focus from what information impacts the model prediction to what information could be used to improve the agent decisions.
  
-ComplLLM \citep{guo2026complllm} optimizes the AI model itself, training it to produce the complementary information that decision-makers lack.
+ComplLLM \citep{guo2026complllm} optimizes the AI model itself, training it to produce complementary information that decision-makers lack.
 This post-training framework fine-tunes an LLM to extract interpretable signals from unstructured text that complement an upstream agent's recommendation, using complementary information value as the reward in supervised fine-tuning followed by reinforcement learning. 
 
 In a preregistered house-price prediction experiment with 421 participants, ILIV-SHAP improved human-AI decisions over standard SHAP explanations when the AI provided complementary information~\citep{guo2026value}.
