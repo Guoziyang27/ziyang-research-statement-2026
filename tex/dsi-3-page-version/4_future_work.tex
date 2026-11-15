@@ -1,0 +1,24 @@
+\textbf{Future agenda: benchmarks for information that improves expert decisions.}
+Current AI evaluation asks whether an agent matches or beats experts---the wrong target in many domains where humans remain in control. 
+I will develop benchmarks that measure how much additional decision value an AI offers conditional on strong expert baselines.
+Scientific review is a starting point: I will compare the LLM-written reviews against the review signals already supplied by human reviewers.
+I will distinguish information from just being informative on the decision utility and the information that offers \emph{additional} decision value conditioning on strong expert (human) decisions.
+My ongoing work auditing LLM-generated peer reviews instantiates this program: how to design LLM agentic system to maximize the output complementarity.
+% Evaluations will hold out papers and test transfer across venues to assess whether complementary value generalizes beyond the corpus used to develop an assistant.
+
+A central challenge for realizing complementarity in practice relies in eliciting experts' provisional judgments and information.
+%  reveal only part of what they know, so measured complementarity can depend on how the baseline is elicited.
+I will study how richer elicitation of confidence and supporting information changes my estimates on information value, and which elicitation give the accurate measure of complementarity with the most actual benefits on collaborative decision-making.
+These benchmarks will provide both a diagnostic for deciding where AI assistance is useful and an objective for designing systems to address specific gaps in expert information.
+
+\textbf{Future agenda: complementary agents for AI+Science.}
+My theoretic and methodologic works have a natural connection to the problems people care in field of AI for Science, which I already have ongoing works on the application.
+% I will extend this approach from evaluating completed research to helping scientists assess hypotheses and prioritize experiments.
+For example, a scientist choosing among candidate experiments may have tacit knowledge about feasibility, while an AI can retrieve evidence that complements their own knowledge from the literature.
+My current working draft~\citep{liu2026checklists} offers a preliminary result on this agenda, which shows that the concrete and verifiable points offered by an LLM-generated checklist can improve the consistency in scientific peer review system.
+% \textbf{Research plan: from retrospective value to prospective benefit.}
+% I will begin with retrospective audits and benchmark construction, then use the resulting estimands to train and compare complementary assistants, and finally evaluate selected interventions with domain experts.
+% Studies will randomize access to assistance, recording initial and revised judgments in assisted and unaided conditions to compare estimated information value with realized gains.
+% I will vary when evidence is shown and how it is organized, including checklist formats, to test whether experts use new evidence without losing valuable private information.
+% Evaluation will account for decision quality, verification effort, and correlated errors across collaborators.
+% The intended outputs are reusable benchmarks, methods for estimating and optimizing complementary value, and evidence about when these methods improve scientific decisions.

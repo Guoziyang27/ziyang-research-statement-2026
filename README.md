@@ -1,5 +1,36 @@
 # template-research-statement
 
+## UChicago DSI Scholars application version (November 2026)
+
+`research-statement.tex` defaults to the DSI version and inputs five files in
+`tex/dsi-3-page-version/`: introduction, current work, scientific review,
+future work, and UChicago fit. The original files in `tex/2-page-version/`
+remain unchanged; set `\dsiversionfalse` in the entry point to compile them.
+
+The [DSI Scholars requirements and FAQ](https://datascience.uchicago.edu/research/postdoctoral-programs/dsi-scholars/)
+allow three pages of research narrative **excluding references**. This version
+places the bibliography on a separate page. It develops the LLM-review audit
+and [learned-checklist application](https://arxiv.org/abs/2610.28666), then proposes
+benchmarks and complementary agents for scientific judgment. The ongoing audit
+is distinguished from the checklist paper's correlated-agreement objective;
+simulation and human-study results retain their respective reference targets.
+
+The fit paragraph names Chenhao Tan and James Evans as prospective mentors and
+connects [Novel Intelligence](https://datascience.uchicago.edu/research/novel-intelligence/)
+with [AI+Science](https://datascience.uchicago.edu/research/ai-science/).
+Faculty connections are grounded in
+[Tan's research](https://computerscience.uchicago.edu/people/chenhao-tan/),
+[AI-assisted scientific verification](https://datascience.uchicago.edu/insights/keeping-science-alive-a-university-of-chicago-project-is-using-ai-to-update-old-science/),
+and [Evans's work on human-aware AI for discovery](https://news.uchicago.edu/story/human-aware-ai-helps-accelerate-scientific-discoveries-new-research-shows).
+
+Compile from the repository root:
+
+```sh
+latexmk -xelatex research-statement.tex
+```
+
+The submission copy is `output/pdf/ziyang-guo-dsi-research-statement.pdf`.
+
 ## RegLab application version (October 2026)
 
 The RegLab cover letter is in `tex/reglab-cover-letter.tex`, with its entry point

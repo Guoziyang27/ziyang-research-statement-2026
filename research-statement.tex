@@ -12,6 +12,11 @@
 \usepackage{lipsum}
 \newcommand{\jessica}[1]{\textcolor{red}{JH: #1}}
 
+% DSI permits three pages of narrative, excluding references.
+% Set \dsiversionfalse to compile the original two-page version.
+\newif\ifdsiversion
+\dsiversiontrue
+
 %--------------------------------------------------------------------------------
 % Document
 %--------------------------------------------------------------------------------
@@ -38,13 +43,27 @@
 \edef\myparskip{\the\parskip}
 \edef\myindent{\the\parindent}
 
-\input{tex/2-page-version/1_introduction}
-\input{tex/2-page-version/2_current_work}
-\input{tex/2-page-version/3_future_work}
+\ifdsiversion
+  \makefooter{Ziyang Guo}{DSI Scholars Research Statement}{\thepage\separator\pageref{LastResearchPage}}
+  \input{tex/dsi-3-page-version/1_introduction}\par
+  \input{tex/dsi-3-page-version/2_current_work}\par
+  % \input{tex/dsi-3-page-version/3_scientific_review}\par
+  \input{tex/dsi-3-page-version/4_future_work}\par
+  \input{tex/dsi-3-page-version/5_uchicago_fit}\par
+  \label{LastResearchPage}
+\else
+  \input{tex/2-page-version/1_introduction}
+  \input{tex/2-page-version/2_current_work}
+  \input{tex/2-page-version/3_future_work}
+\fi
 
 %--------------------------------------------------------------------------------
 % References
 %--------------------------------------------------------------------------------
+\ifdsiversion
+  \clearpage
+  \makefooter{Ziyang Guo}{DSI Postdoctoral Scholars Research Statement --- References}{\thepage}
+\fi
 \begingroup
 \setstretch{1.1}
 \reffont

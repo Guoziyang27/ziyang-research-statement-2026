@@ -1,0 +1,16 @@
+\textbf{Application: auditing and improving AI-assisted scientific review.}
+A review can sound plausible or resemble human feedback while adding little to the information available to a reviewer or area chair.
+My ongoing work audits LLM-generated reviews through complementary information value.
+Preliminary analyses indicate that raw LLM reviews offer little complementary value, while structured pipelines can provide more.
+This motivates evaluating review assistance conditional on existing expert judgments, and distinguishing the information a system supplies from how persuasively it presents that information.
+
+In joint work on learning review checklists~\cite{liu2026checklists}, we develop an intervention that helps reviewers cover evidence they might otherwise miss.
+Our LLM-assisted pipeline extracts atomic claims from historical reviews, retains concerns verifiable against manuscript materials, and organizes them into a hierarchy of checklist items.
+We select the granularity using correlated agreement: agreement between independent reviews of the same paper beyond agreement across different papers.
+Shared checks can reduce reviewer lottery variance but also introduce common bias.
+In simulations on held-out NeurIPS 2021 and ICLR 2022 papers, the learned checklists reduced three-reviewer committee mean squared error by 58\% and 21\%, respectively, relative to a simulated unaided-reviewer population target.
+In a 20-participant study, LLM-completed checklists reduced paper-ranking mean squared error from 0.48 to 0.22 against the NeurIPS ordering.
+These targets assess consistency with reference judgments rather than objective scientific quality.
+
+These projects connect diagnosing missing information to designing assistance that supplies it.
+They motivate a broader question for AI+Science: how can AI expand the evidence experts consider while preserving their specialized knowledge and independent judgment?
